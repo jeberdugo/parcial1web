@@ -15,41 +15,35 @@
 
 <body>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
+        <div class="container" >
+            <div class="row" >
+                <div class=" col-12 col-md-6 div-logo" >
                     <a href=""><img src="assets/Restaurant & Lounge.png" id="logo" alt="Logo Restaurant & Lounge"></a>
                 </div>
-                <div class="col-12 col-md-6 right">
-                    <button id="cart-btn">
-                        <img src="assets/image 1.png" id="cart-img" alt="Carrito">
-                    </button>
+                <div class="col-12 col-md-6 right div-logo " id="pos-logo">
+                    <div class="row">
+                        <div class="col-10 col-md-9 right  cart-itms-div">
+                            <button id="cart-btn">
+                                <img src="assets/image 1.png" onclick="changeToCart()" id="cart-img" alt="Carrito">
+                            </button>
+                        </div>
+                        <div class="col-2 col-md-3 left cart-itms-div">
+                            <span id="items-cart"></span>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </header>
-    <section id="banner">
-        <img src="assets/unsplash_LV2p9Utbkbw.png" id="banner-img" alt="">
+    <section id="banner" >
+        <img src="assets/unsplash_LV2p9Utbkbw.png"  id="banner-img" alt="">
     </section>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container">
             <div >
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Burgers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tacos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Salads</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ">Desserts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ">Drinks & Sides</a>
-                    </li>
+                <ul class="navbar-nav" id="menu">
+                    
                 </ul>
             </div>
         </div>
@@ -58,13 +52,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 center  underline">
-                    <h2 id="category-title">BURGUERS</h2>
+                    <h2 id="category-title"></h2>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-3"></div>
+            <div class="row" id="productos">>
             </div>
         </div>
     </section>
@@ -77,6 +70,36 @@
             </div>
         </div>
     </footer>
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+<div class="modal-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Cancel the order</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Are you sure about cancelling the order?</p>
+            </div>
+            <hr>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-12 col-md-6 right-lg">
+            <button id="accept-btn-confirm" onclick="clearCart()">Yes, I want to cancel the order</button>
+            <button id="cancel-btn-confirm" onclick="closeModal()">No, I want to continue adding products</button>
+        </div>
+  
+  </div>
+</div>
+</div>
+    
 </body>
 
 </html>
